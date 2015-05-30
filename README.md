@@ -8,6 +8,8 @@ In development ...
 ToDo
 ----
 
+### API
+
 - [ ] Issues
   - [x] Listing issues
     - [ ] parameters
@@ -45,3 +47,8 @@ ToDo
 - [ ] Roles
 - [ ] Groups
 - [ ] Custom Fields
+
+---
+
+- [ ] document
+- [ ] unite.vim
