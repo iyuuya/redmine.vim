@@ -14,7 +14,7 @@ ToDo
   - [x] Listing issues
     - [ ] parameters
     - [ ] optional filters
-  - [ ] Showing an issue
+  - [x] Showing an issue
   - [ ] Creating an issue
   - [ ] Updating an issue
   - [ ] Deleting an issue
