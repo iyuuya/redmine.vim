@@ -9,7 +9,9 @@ ToDo
 ----
 
 - [ ] Issues
-  - [ ] Listing issues
+  - [x] Listing issues
+    - [ ] parameters
+    - [ ] optional filters
   - [ ] Showing an issue
   - [ ] Creating an issue
   - [ ] Updating an issue
