@@ -28,7 +28,8 @@ ToDo
   - [ ] Deleting a project
 - [ ] Project Memberships
 - [ ] Users
-  - [ ] Listing users
+  - [x] Listing users
+    - [ ] optional filters
   - [ ] Showing a user
   - [ ] Creating a user
   - [ ] Updating a user
