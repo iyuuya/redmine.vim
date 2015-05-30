@@ -17,7 +17,7 @@ ToDo
   - [ ] Adding a watcher
   - [ ] Removing a watcher
 - [ ] Projects
-  - [ ] Listing projects
+  - [x] Listing projects
   - [ ] Showing a project
   - [ ] Creating a project
   - [ ] Updating a project
