@@ -34,7 +34,8 @@ endfunction
 function! redmine#wiki_page#update()
 endfunction
 
-function! redmine#wiki_page#delete()
+function! redmine#wiki_page#delete(project, page)
+  return redmine#client#delete('/projects/' . a:project . '/wiki/' . a:page)
 endfunction
 
 let &cpo = s:save_cpo

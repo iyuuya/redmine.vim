@@ -48,7 +48,7 @@ ToDo
   - [x] Getting a wiki page
   - [x] Getting an old version of a wiki page
   - [ ] Creating or updating a wiki page
-  - [ ] Deleting a wiki page
+  - [x] Deleting a wiki page
 - [ ] Queries
 - [ ] Attachments
 - [ ] Issue Statuses
