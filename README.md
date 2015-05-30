@@ -24,6 +24,11 @@ ToDo
   - [ ] Deleting a project
 - [ ] Project Memberships
 - [ ] Users
+  - [ ] Listing users
+  - [ ] Showing a user
+  - [ ] Creating a user
+  - [ ] Updating a user
+  - [ ] Deleting a user
 - [ ] Time Entries
 - [ ] News
 - [ ] Issue Relations
