@@ -22,7 +22,15 @@ function! redmine#project#all(...)
   return s:HTTP.get(s:url, s:params, s:headers())
 endfunction
 
-function! redmine#project#show()
+" [memo] - include: trackers, issue_categories, enabled_modules
+function! redmine#project#show(id, ...)
+  if a:0 >= 1
+    let s:params = { 'include' : join(a:000, ',')}
+  else
+    let s:params = {}
+  end
+  let s:url = g:redmine_url. '/projects/' . a:id . '.json'
+  return s:HTTP.get(s:url, s:params, s:headers())
 endfunction
 
 function! redmine#project#create()
