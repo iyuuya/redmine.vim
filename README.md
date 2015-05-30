@@ -34,6 +34,11 @@ ToDo
   - [ ] Updating a user
   - [ ] Deleting a user
 - [ ] Time Entries
+  - [x] Listing time entries
+  - [ ] Showing a time entry
+  - [ ] Creating a time entry
+  - [ ] Updating a time entry
+  - [ ] Deleting a time entry
 - [ ] News
 - [ ] Issue Relations
 - [ ] Versions
