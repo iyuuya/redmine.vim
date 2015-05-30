@@ -46,7 +46,7 @@ ToDo
 - [ ] Wiki Pages
   - [x] Getting the pages list of a wiki
   - [x] Getting a wiki page
-  - [ ] Getting an old version of a wiki page
+  - [x] Getting an old version of a wiki page
   - [ ] Creating or updating a wiki page
   - [ ] Deleting a wiki page
 - [ ] Queries

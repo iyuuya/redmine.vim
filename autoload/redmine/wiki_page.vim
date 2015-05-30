@@ -17,6 +17,17 @@ function! redmine#wiki_page#show(project, page, ...)
   return redmine#client#get('/projects/' . a:project . '/wiki/' . a:page, s:params)
 endfunction
 
+" [memo] - attachments
+function! redmine#wiki_page#show_with_version(project, page, version, ...)
+  if a:0 >= 1
+    let s:params = { 'include': join(a:000, ',') }
+  else
+    let s:params = {}
+  endif
+
+  return redmine#client#get('/projects/' . a:project . '/wiki/' . a:page . '/' . a:version, s:params)
+endfunction
+
 function! redmine#wiki_page#create()
 endfunction
 
