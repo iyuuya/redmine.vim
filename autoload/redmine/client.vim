@@ -24,7 +24,14 @@ function! redmine#client#post(path, params)
 endfunction
 
 function! redmine#client#put(path, params)
-  " let s:url = s:gen_url(a:path)
+  let s:request = {
+        \ 'method' : 'PUT',
+        \ 'url' : s:gen_url(a:path),
+        \ 'data' : s:JSON.encode(a:params),
+        \ 'headers' : s:headers(),
+        \  'contentType' : 'application/json'
+        \ }
+  return s:HTTP.request(s:request)
 endfunction
 
 function! redmine#client#delete(path)
