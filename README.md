@@ -9,6 +9,13 @@ ToDo
 ----
 
 - [ ] Issues
+  - [ ] Listing issues
+  - [ ] Showing an issue
+  - [ ] Creating an issue
+  - [ ] Updating an issue
+  - [ ] Deleting an issue
+  - [ ] Adding a watcher
+  - [ ] Removing a watcher
 - [ ] Projects
 - [ ] Project Memberships
 - [ ] Users
