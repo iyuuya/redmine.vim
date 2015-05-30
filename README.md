@@ -1,6 +1,8 @@
 redmine.vim
 ===========
 
+[Redmine API](http://www.redmine.org/projects/redmine/wiki/Rest_api) Client for Vim
+
 In development ...
 
 ToDo
@@ -24,3 +26,4 @@ ToDo
 - [ ] Roles
 - [ ] Groups
 - [ ] Custom Fields
+
