@@ -8,7 +8,7 @@ In development ...
 ToDo
 ----
 
-- [ ] Issuses
+- [ ] Issues
 - [ ] Projects
 - [ ] Project Memberships
 - [ ] Users
@@ -26,4 +26,3 @@ ToDo
 - [ ] Roles
 - [ ] Groups
 - [ ] Custom Fields
-
