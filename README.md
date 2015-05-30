@@ -44,6 +44,11 @@ ToDo
 - [ ] Issue Relations
 - [ ] Versions
 - [ ] Wiki Pages
+  - [x] Getting the pages list of a wiki
+  - [ ] Getting a wiki page
+  - [ ] Getting an old version of a wiki page
+  - [ ] Creating or updating a wiki page
+  - [ ] Deleting a wiki page
 - [ ] Queries
 - [ ] Attachments
 - [ ] Issue Statuses
