@@ -28,10 +28,14 @@ function! redmine#wiki_page#show_with_version(project, page, version, ...)
   return redmine#client#get('/projects/' . a:project . '/wiki/' . a:page . '/' . a:version, s:params)
 endfunction
 
-function! redmine#wiki_page#create()
-endfunction
-
-function! redmine#wiki_page#update()
+" [todo] - comments, version
+function! redmine#wiki_page#create_or_update(project, page, text)
+  let s:params = {
+        \ 'wiki_page' : {
+        \   'text' : a:text,
+        \   }
+        \ }
+  return redmine#client#put('/projects/' . a:project . '/wiki/' . a:page , s:params)
 endfunction
 
 function! redmine#wiki_page#delete(project, page)
