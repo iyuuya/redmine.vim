@@ -17,6 +17,11 @@ ToDo
   - [ ] Adding a watcher
   - [ ] Removing a watcher
 - [ ] Projects
+  - [ ] Listing projects
+  - [ ] Showing a project
+  - [ ] Creating a project
+  - [ ] Updating a project
+  - [ ] Deleting a project
 - [ ] Project Memberships
 - [ ] Users
 - [ ] Time Entries
