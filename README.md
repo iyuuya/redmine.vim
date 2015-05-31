@@ -5,6 +5,22 @@ redmine.vim
 
 In development ...
 
+Install
+-------
+
+### Common
+
+```vim
+let g:redmine_url='https://redmine.example.com'
+let g:redmine_api_key='YOUR_REDMINME_API_KEY'
+```
+
+### NeoBundle
+
+```vim
+NeoBundle 'iyuuya/redmine.vim'
+```
+
 ToDo
 ----
 
