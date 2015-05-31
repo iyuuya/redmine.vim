@@ -65,7 +65,8 @@ ToDo
   - [x] Showing a user
   - [x] Creating a user
     - [ ] check attribtues
-  - [ ] Updating a user
+  - [x] Updating a user
+    - [ ] check attribtues
   - [x] Deleting a user
 - [ ] Time Entries
   - [x] Listing time entries

@@ -35,7 +35,10 @@ function! redmine#user#create(user)
   return redmine#client#post('/users', s:params)
 endfunction
 
-function! redmine#user#update()
+function! redmine#user#update(id, user)
+  let s:params = { 'user' : a:user }
+
+  return redmine#client#put('/users' . a:id, s:params)
 endfunction
 
 function! redmine#user#delete(id)
