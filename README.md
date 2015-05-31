@@ -62,7 +62,7 @@ ToDo
 - [ ] Users
   - [x] Listing users
     - [ ] optional filters
-  - [ ] Showing a user
+  - [x] Showing a user
   - [ ] Creating a user
   - [ ] Updating a user
   - [x] Deleting a user

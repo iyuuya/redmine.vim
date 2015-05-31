@@ -7,7 +7,15 @@ function! redmine#user#all(...)
   return redmine#client#get('/users', {})
 endfunction
 
-function! redmine#user#show()
+" [memo] - include: memberships, groups
+function! redmine#user#show(id, ...)
+  if a:0 >= 1
+    let s:params = { 'include' : join(a:000, ',')}
+  else
+    let s:params = {}
+  end
+
+  return redmine#client#get('/users/' . a:id, s:params)
 endfunction
 
 function! redmine#user#create()
