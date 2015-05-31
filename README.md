@@ -71,7 +71,8 @@ ToDo
 - [ ] Time Entries
   - [x] Listing time entries
   - [x] Showing a time entry
-  - [ ] Creating a time entry
+  - [x] Creating a time entry
+    - [ ] check attribtues
   - [ ] Updating a time entry
   - [x] Deleting a time entry
 - [ ] News
