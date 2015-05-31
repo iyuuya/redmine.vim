@@ -63,7 +63,8 @@ ToDo
   - [x] Listing users
     - [ ] optional filters
   - [x] Showing a user
-  - [ ] Creating a user
+  - [x] Creating a user
+    - [ ] check attribtues
   - [ ] Updating a user
   - [x] Deleting a user
 - [ ] Time Entries

@@ -18,7 +18,21 @@ function! redmine#user#show(id, ...)
   return redmine#client#get('/users/' . a:id, s:params)
 endfunction
 
-function! redmine#user#create()
+" [todo] - check issue attributes
+"
+" * user
+"   + login (required)
+"   + password
+"   + firstname (required)
+"   + lastname (required)
+"   + mail (required)
+"   + auth_source_id
+"   + mail_notification
+"   + must_change_passwd
+function! redmine#user#create(user)
+  let s:params = { 'user' : a:user }
+
+  return redmine#client#post('/users', s:params)
 endfunction
 
 function! redmine#user#update()
