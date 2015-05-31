@@ -73,7 +73,8 @@ ToDo
   - [x] Showing a time entry
   - [x] Creating a time entry
     - [ ] check attribtues
-  - [ ] Updating a time entry
+  - [x] Updating a time entry
+    - [ ] check attribtues
   - [x] Deleting a time entry
 - [ ] News
 - [ ] Issue Relations

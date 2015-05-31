@@ -23,7 +23,10 @@ function! redmine#time_entry#create(time_entry)
   return redmine#client#post('/time_entries', s:params)
 endfunction
 
-function! redmine#time_entry#update()
+function! redmine#time_entry#update(id, time_entry)
+  let s:params = { 'time_entry' : a:time_entry }
+
+  return redmine#client#put('/time_entries/' . a:id, s:params)
 endfunction
 
 function! redmine#time_entry#delete(id)
