@@ -55,7 +55,8 @@ function! redmine#issue#delete(id)
   return redmine#client#delete('/issues/' . a:id)
 endfunction
 
-function! redmine#issue#add_watcher()
+function! redmine#issue#add_watcher(id, user_id)
+  return redmine#client#post('/issues/' . a:id . '/watchers', { 'user_id': a:user_id })
 endfunction
 
 function! redmine#issue#delete_watcher(id, user_id)
