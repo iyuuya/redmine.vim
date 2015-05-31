@@ -14,33 +14,32 @@ function! s:gen_url(path)
   return g:redmine_url . a:path . '.json'
 endfunction
 
+function! s:request(method, path, params)
+  let s:_request = {
+        \ 'method' : a:method,
+        \ 'url' : s:gen_url(a:path),
+        \ 'data' : s:JSON.encode(a:params),
+        \ 'headers' : s:headers(),
+        \  'contentType' : 'application/json'
+        \ }
+  return s:HTTP.request(s:_request)
+endfunction
+
 function! redmine#client#get(path, params)
   let s:url = s:gen_url(a:path)
   return s:HTTP.get(s:url, a:params, s:headers())
 endfunction
 
 function! redmine#client#post(path, params)
-  " let s:url = s:gen_url(a:path)
+  return s:request('POST', a:path, a:params)
 endfunction
 
 function! redmine#client#put(path, params)
-  let s:request = {
-        \ 'method' : 'PUT',
-        \ 'url' : s:gen_url(a:path),
-        \ 'data' : s:JSON.encode(a:params),
-        \ 'headers' : s:headers(),
-        \  'contentType' : 'application/json'
-        \ }
-  return s:HTTP.request(s:request)
+  return s:request('PUT', a:path, a:params)
 endfunction
 
 function! redmine#client#delete(path)
-  let s:request = {
-        \ 'method' : 'DELETE',
-        \ 'url' : s:gen_url(a:path),
-        \ 'headers' : s:headers(),
-        \ }
-  return s:HTTP.request(s:request)
+  return s:request('DELETE', a:path, {})
 endfunction
 
 let &cpo = s:save_cpo

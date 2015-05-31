@@ -21,7 +21,28 @@ function! redmine#issue#show(id, ...)
   return redmine#client#get('/issues/' . a:id, s:params)
 endfunction
 
-function! redmine#issue#create()
+" [todo] - check issue attributes
+" [todo] - attachments
+"
+" * issue
+"   + project_id
+"   + tracker_id
+"   + status_id
+"   + priority_id
+"   + subject
+"   + description
+"   + category_id
+"   + fixed_version_id
+"   + assigned_to_id
+"   + parent_issue_id
+"   + custom_fields
+"   + watcher_user_ids
+"   + is_private
+"   + estimated_hours
+function! redmine#issue#create(issue)
+  let s:params = { 'issue' : a:issue }
+
+  return redmine#client#post('/issues', s:params)
 endfunction
 
 function! redmine#issue#update()

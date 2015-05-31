@@ -41,7 +41,9 @@ ToDo
     - [ ] parameters
     - [ ] optional filters
   - [x] Showing an issue
-  - [ ] Creating an issue
+  - [x] Creating an issue
+    - [ ] check attribtues
+    - [ ] attachments
   - [ ] Updating an issue
   - [x] Deleting an issue
   - [ ] Adding a watcher
