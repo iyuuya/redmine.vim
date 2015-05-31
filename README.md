@@ -70,7 +70,7 @@ ToDo
   - [x] Deleting a user
 - [ ] Time Entries
   - [x] Listing time entries
-  - [ ] Showing a time entry
+  - [x] Showing a time entry
   - [ ] Creating a time entry
   - [ ] Updating a time entry
   - [x] Deleting a time entry

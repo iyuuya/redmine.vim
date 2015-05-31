@@ -6,7 +6,8 @@ function! redmine#time_entry#all()
   return redmine#client#get('/time_entries', {})
 endfunction
 
-function! redmine#time_entry#show()
+function! redmine#time_entry#show(id)
+  return redmine#client#get('/time_entries/' . a:id, {})
 endfunction
 
 function! redmine#time_entry#create()
