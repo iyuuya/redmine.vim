@@ -27,7 +27,8 @@ endfunction
 function! redmine#issue#update()
 endfunction
 
-function! redmine#issue#delete()
+function! redmine#issue#delete(id)
+  return redmine#client#delete('/issues/' . a:id)
 endfunction
 
 let &cpo = s:save_cpo

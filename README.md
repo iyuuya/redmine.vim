@@ -17,7 +17,7 @@ ToDo
   - [x] Showing an issue
   - [ ] Creating an issue
   - [ ] Updating an issue
-  - [ ] Deleting an issue
+  - [x] Deleting an issue
   - [ ] Adding a watcher
   - [ ] Removing a watcher
 - [ ] Projects
