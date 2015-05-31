@@ -25,7 +25,7 @@ ToDo
   - [x] Showing a project
   - [ ] Creating a project
   - [ ] Updating a project
-  - [ ] Deleting a project
+  - [x] Deleting a project
 - [ ] Project Memberships
 - [ ] Users
   - [x] Listing users

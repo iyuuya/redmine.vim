@@ -30,7 +30,8 @@ endfunction
 function! redmine#project#update()
 endfunction
 
-function! redmine#project#delete()
+function! redmine#project#delete(id)
+  return redmine#client#delete('/projects/' . a:id)
 endfunction
 
 let &cpo = s:save_cpo
