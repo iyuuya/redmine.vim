@@ -55,7 +55,8 @@ ToDo
   - [x] Showing a project
   - [x] Creating a project
     - [ ] check attributes
-  - [ ] Updating a project
+  - [x] Updating a project
+    - [ ] check attribtues
   - [x] Deleting a project
 - [ ] Project Memberships
 - [ ] Users

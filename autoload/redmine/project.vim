@@ -42,7 +42,10 @@ function! redmine#project#create(project)
   return redmine#client#post('/projects', s:params)
 endfunction
 
-function! redmine#project#update()
+function! redmine#project#update(id, project)
+  let s:params = { 'project' : a:project }
+
+  return redmine#client#post('/projects' . a:id, s:params)
 endfunction
 
 function! redmine#project#delete(id)
