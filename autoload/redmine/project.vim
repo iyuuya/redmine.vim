@@ -24,7 +24,22 @@ function! redmine#project#show(id, ...)
   return redmine#client#get('/projects/' . a:id, a:params)
 endfunction
 
-function! redmine#project#create()
+" [todo] - check project attributes
+"
+" * project
+"   + name (required)
+"   + identifier (required)
+"   + description
+"   + homepage
+"   + is_public
+"   + parent_id
+"   + inherit_members
+"   + tracker_ids
+"   + enabled_module_names
+function! redmine#project#create(project)
+  let s:params = { 'project' : a:project }
+
+  return redmine#client#post('/projects', s:params)
 endfunction
 
 function! redmine#project#update()

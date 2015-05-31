@@ -53,7 +53,8 @@ ToDo
 - [ ] Projects
   - [x] Listing projects
   - [x] Showing a project
-  - [ ] Creating a project
+  - [x] Creating a project
+    - [ ] check attributes
   - [ ] Updating a project
   - [x] Deleting a project
 - [ ] Project Memberships
