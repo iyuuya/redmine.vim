@@ -16,7 +16,8 @@ endfunction
 function! redmine#user#update()
 endfunction
 
-function! redmine#user#delete()
+function! redmine#user#delete(id)
+  return redmine#client#delete('/users/' . a:id)
 endfunction
 
 let &cpo = s:save_cpo

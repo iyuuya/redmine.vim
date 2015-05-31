@@ -33,7 +33,7 @@ ToDo
   - [ ] Showing a user
   - [ ] Creating a user
   - [ ] Updating a user
-  - [ ] Deleting a user
+  - [x] Deleting a user
 - [ ] Time Entries
   - [x] Listing time entries
   - [ ] Showing a time entry
