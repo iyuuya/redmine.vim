@@ -19,7 +19,7 @@ ToDo
   - [ ] Updating an issue
   - [x] Deleting an issue
   - [ ] Adding a watcher
-  - [ ] Removing a watcher
+  - [x] Removing a watcher
 - [ ] Projects
   - [x] Listing projects
   - [x] Showing a project

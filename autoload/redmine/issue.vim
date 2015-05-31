@@ -31,5 +31,12 @@ function! redmine#issue#delete(id)
   return redmine#client#delete('/issues/' . a:id)
 endfunction
 
+function! redmine#issue#add_watcher()
+endfunction
+
+function! redmine#issue#delete_watcher(id, user_id)
+  return redmine#client#delete('/issues/' . a:id . '/watchers/' . a:user_id)
+endfunction
+
 let &cpo = s:save_cpo
 unlet s:save_cpo
