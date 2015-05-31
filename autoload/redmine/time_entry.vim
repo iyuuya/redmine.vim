@@ -15,7 +15,8 @@ endfunction
 function! redmine#time_entry#update()
 endfunction
 
-function! redmine#time_entry#delete()
+function! redmine#time_entry#delete(id)
+  return redmine#client#delete('/time_entries/' . a:id)
 endfunction
 
 let &cpo = s:save_cpo
