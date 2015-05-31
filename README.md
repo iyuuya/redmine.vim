@@ -44,7 +44,9 @@ ToDo
   - [x] Creating an issue
     - [ ] check attribtues
     - [ ] attachments
-  - [ ] Updating an issue
+  - [x] Updating an issue
+    - [ ] check attribtues
+    - [ ] attachments
   - [x] Deleting an issue
   - [ ] Adding a watcher
   - [x] Removing a watcher

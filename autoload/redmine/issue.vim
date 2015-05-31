@@ -45,7 +45,10 @@ function! redmine#issue#create(issue)
   return redmine#client#post('/issues', s:params)
 endfunction
 
-function! redmine#issue#update()
+function! redmine#issue#update(id, issue)
+  let s:params = { 'issue' : a:issue }
+
+  return redmine#client#put('/issues' . a:id, s:params)
 endfunction
 
 function! redmine#issue#delete(id)
