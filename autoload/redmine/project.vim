@@ -10,7 +10,7 @@ function! redmine#project#all(...)
     let s:params = {}
   end
 
-  return redmine#client#get('/projects', a:params)
+  return redmine#client#get('/projects', s:params)
 endfunction
 
 " [memo] - include: trackers, issue_categories, enabled_modules
@@ -21,7 +21,7 @@ function! redmine#project#show(id, ...)
     let s:params = {}
   end
 
-  return redmine#client#get('/projects/' . a:id, a:params)
+  return redmine#client#get('/projects/' . a:id, s:params)
 endfunction
 
 " [todo] - check project attributes
