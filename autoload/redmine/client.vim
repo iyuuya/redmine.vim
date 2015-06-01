@@ -20,14 +20,28 @@ function! s:request(method, path, params)
         \ 'url' : s:gen_url(a:path),
         \ 'data' : s:JSON.encode(a:params),
         \ 'headers' : s:headers(),
-        \  'contentType' : 'application/json'
+        \ 'contentType' : 'application/json'
         \ }
+  if exists('g:redmine_basic_auth_username') && exists('g:redmine_basic_auth_password')
+    let s:_request.username = g:redmine_basic_auth_username
+    let s:_request.password = g:redmine_basic_auth_password
+  endif
   return s:HTTP.request(s:_request)
 endfunction
 
 function! redmine#client#get(path, params)
-  let s:url = s:gen_url(a:path)
-  return s:HTTP.get(s:url, a:params, s:headers())
+  let s:_request = {
+        \ 'method' : 'GET',
+        \ 'url' : s:gen_url(a:path),
+        \ 'param' : a:params,
+        \ 'headers' : s:headers(),
+        \ 'contentType' : 'application/json'
+        \ }
+  if exists('g:redmine_basic_auth_username') && exists('g:redmine_basic_auth_password')
+    let s:_request.username = g:redmine_basic_auth_username
+    let s:_request.password = g:redmine_basic_auth_password
+  endif
+  return s:HTTP.request(s:_request)
 endfunction
 
 function! redmine#client#post(path, params)
