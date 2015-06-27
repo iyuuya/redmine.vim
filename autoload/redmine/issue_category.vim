@@ -6,5 +6,9 @@ function! redmine#issue_category#all(project)
   return redmine#client#get('/projects/' . a:project . '/issue_categories', {})
 endfunction
 
+function! redmine#issue_category#show(id)
+  return redmine#client#get('/issue_categories/' . a:id, {})
+endfunction
+
 let &cpo = s:save_cpo
 unlet s:save_cpo
