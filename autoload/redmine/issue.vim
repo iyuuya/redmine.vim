@@ -10,7 +10,8 @@ function! redmine#issue#all(...)
   return redmine#client#get('/issues', s:params)
 endfunction
 
-" [memo] - include: children, attachments, relations, changesets, journals, watchers
+" [memo] - include: children, attachments, changesets, journals, watchers
+"                   (relations) -> redmine#issue_relation#all()
 function! redmine#issue#show(id, ...)
   if a:0 >= 1
     let s:params = { 'include' : join(a:000, ',')}
