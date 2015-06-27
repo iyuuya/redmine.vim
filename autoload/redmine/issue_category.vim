@@ -26,5 +26,11 @@ function! redmine#issue_category#update(id, issue_category)
   return redmine#client#put('/issue_categories/' . a:id, s:params)
 endfunction
 
+" [todo] - parameters (reassign_to_id)
+" -> (redmine#client#delete(...)
+function! redmine#issue_category#delete(id)
+  return redmine#client#delete('/issue_categories/' . a:id)
+endfunction
+
 let &cpo = s:save_cpo
 unlet s:save_cpo
