@@ -3,9 +3,12 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " [memo] - include: rackers, issue_categories, enabled_modules
+" [todo] - limit, offset
 function! redmine#project#all(...)
-  if a:0 >= 1
+  if a:0 > 1
     let s:params = { 'include' : join(a:000, ',') }
+  elseif a:0 == 1
+    let s:params = a:1
   else
     let s:params = {}
   end
