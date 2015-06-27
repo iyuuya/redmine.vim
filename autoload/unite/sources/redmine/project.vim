@@ -2,6 +2,9 @@ scriptencoding utf-8
 let s:save_cpo = &cpo
 set cpo&vim
 
+let s:V = vital#of('redmine')
+let s:String = s:V.import('Data.String')
+
 let s:unite_redmine_project = { 'name' : 'redmine/project' }
 
 " TODO: implements
@@ -20,9 +23,8 @@ function! s:unite_redmine_project.gather_candidates(args, content)
   call sort(s:projects, "s:compare_project_name")
 
   return map(s:projects, "{
-        \ 'word' : v:val.name . '[' . v:val.id . ']',
+        \ 'word' : v:val.name . ' - ' . v:val.description,
         \}")
-  " v:val.description
 endfunction
 
 function! unite#sources#redmine#project#define()
