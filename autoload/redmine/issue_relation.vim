@@ -2,7 +2,7 @@ scriptencoding utf-8
 let s:save_cpo = &cpo
 set cpo&vim
 
-function! redmine#issue_relations#delete(id)
+function! redmine#issue_relation#delete(id)
   return redmine#client#delete('/relations/' . a:id)
 endfunction
 
