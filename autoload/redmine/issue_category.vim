@@ -20,5 +20,11 @@ function! redmine#issue_category#create(project, issue_category)
   return redmine#client#post('/projects/' . a:project . '/issue_categories', s:params)
 endfunction
 
+function! redmine#issue_category#update(id, issue_category)
+  let s:params = { 'issue_category' : a:issue_category }
+
+  return redmine#client#put('/issue_categories/' . a:id, s:params)
+endfunction
+
 let &cpo = s:save_cpo
 unlet s:save_cpo
