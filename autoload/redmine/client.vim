@@ -7,7 +7,7 @@ let s:HTTP = s:V.import('Web.HTTP')
 let s:JSON = s:V.import('Web.JSON')
 
 function! s:headers()
-  return { 'X-Redmine-API-Key' : g:redmine_api_key }
+  return { 'X-Redmine-API-Key' : g:redmine_api_key, 'X-Redmine-Switch-User' : g:redmine_user }
 endfunction
 
 function! s:gen_url(path)
@@ -41,7 +41,7 @@ function! redmine#client#get(path, params)
     let s:_request.username = g:redmine_basic_auth_username
     let s:_request.password = g:redmine_basic_auth_password
   endif
-  return s:HTTP.request(s:_request)
+  return s:JSON.decode(s:HTTP.request(s:_request).content)
 endfunction
 
 function! redmine#client#post(path, params)
