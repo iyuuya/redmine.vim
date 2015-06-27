@@ -6,6 +6,10 @@ function! redmine#issue_relation#all(issue)
   return redmine#client#get('/issues/' . a:issue . '/relations', {})
 endfunction
 
+function! redmine#issue_relation#show(relation)
+  return redmine#client#get('/relations/' . a:relation, {})
+endfunction
+
 function! redmine#issue_relation#delete(id)
   return redmine#client#delete('/relations/' . a:id)
 endfunction
