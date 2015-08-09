@@ -9,6 +9,7 @@ let s:unite_redmine = {
       \ }
 let s:subsources = [
       \ 'project',
+      \ 'wiki',
       \ ]
 "      \ 'issue',
 "      \ 'wiki',

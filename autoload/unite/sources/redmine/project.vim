@@ -7,7 +7,6 @@ let s:String = s:V.import('Data.String')
 
 let s:unite_redmine_project = { 'name' : 'redmine/project' }
 
-" TODO: implements
 function! s:unite_redmine_project.gather_candidates(args, content)
   let s:projects = []
   let s:total_count = 1
@@ -24,6 +23,9 @@ function! s:unite_redmine_project.gather_candidates(args, content)
 
   return map(s:projects, "{
         \ 'word' : v:val.name . ' - ' . v:val.description,
+        \ 'source' : 'redmine/project',
+        \ 'kind' : 'redmine_project',
+        \ 'action__project_id' : v:val.name,
         \}")
 endfunction
 
