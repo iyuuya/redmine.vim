@@ -5,7 +5,11 @@ set cpo&vim
 let s:V = vital#of('redmine')
 let s:String = s:V.import('Data.String')
 
-let s:unite_redmine_project = { 'name' : 'redmine/project' }
+let s:unite_redmine_project = {
+      \ 'name' : 'redmine/project',
+      \ 'default_action' : 'start',
+      \ 'default_kind' : 'source',
+      \ }
 
 function! s:unite_redmine_project.gather_candidates(args, content)
   let s:projects = []
@@ -21,11 +25,11 @@ function! s:unite_redmine_project.gather_candidates(args, content)
 
   call sort(s:projects, "s:compare_project_name")
 
-  return map(s:projects, "{
-        \ 'word' : v:val.name . ' - ' . v:val.description,
-        \ 'source' : 'redmine/project',
-        \ 'kind' : 'redmine_project',
-        \ 'action__project_id' : v:val.name,
+  let s:result = redmine#project#all()
+  return map(s:result.projects, "{
+        \ 'word' : '[' . v:val.id . ']' . v:val.name . ' - ' . v:val.description,
+        \ 'action__source_name' : 'redmine/project/actions',
+        \ 'action__source_args' : [v:val.id],
         \}")
 endfunction
 
